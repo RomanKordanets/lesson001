@@ -5,4 +5,5 @@ Console.Write("Введите число: ");
 string Str_1 = Console.ReadLine();
 int Int_1 = int.Parse(Str_1);
 Console.Write($"{Int_1} => ");
-for (int i=1; i<Int_1; i++){if (i % 2 == 0) Console.Write($"{i}, ");}
+// for (int i=1; i<Int_1; i++){if (i % 2 == 0) Console.Write($"{i}, ");}
+for (int i=2; i<Int_1; i+=2){Console.Write($"{i}, ");}
