@@ -10,13 +10,11 @@ int Prompt(string message)
 int SumNumber(int numberN)
 {
     int counter = Convert.ToString(numberN).Length;  // счётчик
-    int advance = 0;                                 // продвижение
     int result = 0;                                  // результат
 
     for (int i = 0; i < counter; i++)
     {
-        advance = numberN - numberN % 10;
-        result = result + (numberN - advance);
+        result = result + (numberN % 10);
         numberN = numberN / 10;
     }
     return result;
