@@ -7,7 +7,7 @@ double[] CreareArray(int len, int min, int max)
     double[] array = new double[len];
     for (int i = 0; i < len; i++)
     {
-        array[i] = rnd.Next(min, max + 1);
+        array[i] = rnd.Next(min, max + 1) + new Random().NextDouble();
     }
     return array;
 }
@@ -17,7 +17,7 @@ void PrintArray(double[] array)
     Console.Write("[");
     while (index < array.Length)
     {
-        Console.Write(array[index]);
+        Console.Write($"{array[index]:f2}");
         index++;
         if (index < array.Length) Console.Write(", ");
     }
@@ -46,4 +46,4 @@ double[] arr = CreareArray(5, 0, 99);
 PrintArray(arr);
 double max = Max(arr);
 double min = Min(arr);
-Console.WriteLine("max-min = " + max + "-" + min + " = " + (max-min));
+Console.WriteLine($"max-min = {max:f2} - {min:f2} = {(max-min):f2}");
